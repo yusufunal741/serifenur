@@ -13,6 +13,9 @@ function App() {
 
   const GIFT_MUSIC_START = 161; // İkinci şarkı: 2:41
 
+  // GitHub Pages /serifenur/ yolunu otomatik kullanır
+  const BASE_URL = import.meta.env.BASE_URL;
+
   const startMusic = () => {
     if (audioRef.current) {
       audioRef.current.currentTime = MUSIC_START;
@@ -73,14 +76,14 @@ function App() {
       {/* İlk şarkı */}
       <audio
         ref={audioRef}
-        src="/birthday-song.mp3"
+        src={`${BASE_URL}birthday-song.mp3`}
         preload="auto"
       />
 
       {/* Hediye açılınca çalacak ikinci şarkı */}
       <audio
         ref={giftAudioRef}
-        src="/hediye-sarki.mp3"
+        src={`${BASE_URL}hediye-sarki.mp3`}
         preload="auto"
       />
 
@@ -145,7 +148,7 @@ function App() {
 
           <div className="photo-card">
             <img
-              src="/photos/foto1.jpg"
+              src={`${BASE_URL}photos/foto1.jpg`}
               alt="Şerifenur ile anımız"
             />
             <p>Çektiğim ilk fotoğrafın</p>
@@ -153,17 +156,17 @@ function App() {
 
           <div className="photo-card">
             <img
-              src="/photos/foto2.jpg"
+              src={`${BASE_URL}photos/foto2.jpg`}
               alt="Birlikte güzel bir anımız"
             />
           </div>
 
           <div className="photo-card photo-three">
-  <img
-    src="/photos/foto3.jpg"
-    alt="Birlikte güzel bir anımız"
-  />
-</div>
+            <img
+              src={`${BASE_URL}photos/foto3.jpg`}
+              alt="Birlikte güzel bir anımız"
+            />
+          </div>
 
           <p className="love-note">
             Seni seviyorum
@@ -172,14 +175,14 @@ function App() {
 
           <div className="photo-card">
             <img
-              src="/photos/foto4.jpg"
+              src={`${BASE_URL}photos/foto4.jpg`}
               alt="Birlikte güzel bir anımız"
             />
           </div>
 
           <div className="photo-card">
             <img
-              src="/photos/foto5.jpg"
+              src={`${BASE_URL}photos/foto5.jpg`}
               alt="Birlikte güzel bir anımız"
             />
           </div>
@@ -191,7 +194,7 @@ function App() {
 
           <div className="photo-card last-photo">
             <img
-              src="/photos/foto6.jpg"
+              src={`${BASE_URL}photos/foto6.jpg`}
               alt="En güzel anılarımızdan biri"
             />
           </div>
@@ -227,7 +230,7 @@ function App() {
 
                 <div className="photo-card gift-photo">
                   <img
-                    src="/yalin.jpg"
+                    src={`${BASE_URL}yalin.jpg`}
                     alt="Yalın konseri"
                   />
                 </div>
